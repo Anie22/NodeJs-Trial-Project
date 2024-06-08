@@ -4,9 +4,9 @@ const formatName = (names) => {
     const name = require("prompt-sync")
     const formatName = name()
 
-    let userName = formatName("Enter your name: ")
-    let Name = userName.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
-    names = Name.trim(/\s/g)
+    let userName = formatName("Enter your name: ").trim()
+    let Name = userName.replace(/\s/g, ' ')
+    names = Name.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
     
     console.log(`"${names}"`)
 
