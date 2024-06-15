@@ -9,7 +9,7 @@ const limitByLength = () => {
     } else {
         const limit = input.slice(0, 100)
 
-        console.log(`${limit}...`)
+        console.log(`${limit}..`)
     }
 
 }
